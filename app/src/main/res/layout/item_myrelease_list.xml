@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp">
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -73,8 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/tv_sfdd"
-            android:drawableLeft="@mipmap/ic_tell"
+            android:drawableStart="@mipmap/ic_tell"
             android:drawablePadding="5dp"
             android:textColor="@color/color_999999"
             android:textSize="14sp" />
@@ -89,8 +88,7 @@
                 android:id="@+id/tv_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/tv_sfdd"
-                android:drawableLeft="@mipmap/ic_address"
+                android:drawableStart="@mipmap/ic_address"
                 android:drawablePadding="5dp"
                 android:textColor="@color/color_999999"
                 android:textSize="14sp" />
@@ -100,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:drawableLeft="@mipmap/ic_look"
+                android:drawableStart="@mipmap/ic_look"
                 android:drawablePadding="5dp"
                 android:gravity="center"
                 android:text="0"
@@ -111,8 +109,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/tv_shanchu"
@@ -120,10 +118,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/bg_huibianbailiyuanjiao5dp"
-                android:paddingBottom="5dp"
                 android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
                 android:text="删除"
                 android:textColor="@color/black" />
 
@@ -134,10 +132,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/tv_shanchu"
                 android:background="@drawable/bg_huibianbailiyuanjiao5dp"
-                android:paddingBottom="5dp"
                 android:paddingLeft="15dp"
-                android:paddingRight="15dp"
                 android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
                 android:text="编辑"
                 android:textColor="@color/black" />
         </RelativeLayout>
