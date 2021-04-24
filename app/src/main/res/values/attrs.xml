@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference" />
+        <attr name="mvAnimDuration" format="integer|reference" />
+        <attr name="mvTextSize" format="dimension|reference" />
+        <attr name="mvTextColor" format="color|reference" />
+        <attr name="mvSingleLine" format="boolean" />
+        <attr name="mvGravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0" />
+            <enum name="top_to_bottom" value="1" />
+            <enum name="right_to_left" value="2" />
+            <enum name="left_to_right" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <attr name="unitHeight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectedTextSize" format="dimension" />
+        <attr name="isCyclic" format="boolean" />
+
+        <attr name="lineColor" format="color" />
+        <attr name="lineHeight" format="dimension" />
+
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="searchedit">
+        <attr name="imagewidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+    <!--圆图片属性-->
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+        <attr name="in_background" format="color"></attr>
+    </declare-styleable>
+
+
+    <!--圆形统计View-->
+    <declare-styleable name="CircleStatisticalView">
+        <!--圆圈背景颜色-->
+        <attr name="circleBackgroundColor" format="color" />
+        <!--圆点边距-->
+        <attr name="dotMargin" format="dimension" />
+        <!--圆点半径-->
+        <attr name="dotRadius" format="dimension" />
+        <!--标记线处X差值-->
+        <attr name="lineGapX" format="dimension" />
+        <!--标记线处Y差值-->
+        <attr name="lineGapY" format="dimension" />
+        <!--标记线文字和线的间距-->
+        <attr name="lineNearTextMargin" format="dimension" />
+        <!--标记线粗细-->
+        <attr name="lineStrokeWidth" format="dimension" />
+        <!--标记文字大小-->
+        <attr name="markTextSize" format="dimension" />
+        <!--标记文字颜色-->
+        <attr name="markTextColor" format="color" />
+        <!--是否使用动画-->
+        <attr name="isUseAnimation" format="boolean" />
+        <!--动画持续时间-->
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+</resources>

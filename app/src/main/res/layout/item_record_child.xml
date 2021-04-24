@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/common_height15"
+        android:paddingRight="@dimen/common_height15"
+        android:paddingTop="@dimen/common_height10">
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_car" />
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_tag"
+            android:paddingLeft="@dimen/common_height10">
+
+            <TextView
+                android:id="@+id/tv_card_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin"
+            android:layout_marginTop="@dimen/common_height8"
+            android:layout_toRightOf="@+id/iv_tag"
+            android:paddingLeft="@dimen/common_height10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_address"
+            android:layout_marginTop="@dimen/common_height10"
+            android:layout_toRightOf="@+id/iv_tag"
+            android:paddingLeft="@dimen/common_height10"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="@dimen/common_height10"
+            android:layout_toRightOf="@+id/iv_tag"
+            android:background="@color/bgColor" />
+    </RelativeLayout>
+</LinearLayout>

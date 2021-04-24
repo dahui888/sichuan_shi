@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/trance_1a99" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_height15"
+                    android:paddingRight="@dimen/common_height15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余电量"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_yu_dl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingLeft="30dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/bgColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_height15"
+                    android:paddingRight="@dimen/common_height15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余电费"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/tv_yu_df"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingLeft="30dp"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_height15"
+                    android:text="充值"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/common_height10"
+                    android:paddingLeft="@dimen/common_height10"
+                    android:paddingRight="@dimen/common_height10"
+                    android:paddingTop="@dimen/common_height15">
+
+                    <com.base.frame.weigt.XGridViewForScrollView
+                        android:id="@+id/mGridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3" />
+
+                    <EditText
+                        android:id="@+id/et_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/common_height5"
+                        android:layout_marginRight="@dimen/common_height5"
+                        android:layout_marginTop="@dimen/common_height15"
+                        android:background="@drawable/bg_gray_line"
+                        android:hint="@string/input_money_info"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/common_height10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/color_cccccc"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_height15"
+                    android:text="充值方式"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@mipmap/ic_jsyh"
+                        android:drawablePadding="@dimen/common_height25"
+                        android:drawableRight="@drawable/rb_green_select"
+                        android:paddingLeft="@dimen/common_height15"
+                        android:paddingRight="@dimen/common_height15"
+                        android:text="@string/blank"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/bgColor" />
+
+                    <RadioButton
+                        android:id="@+id/rb_weixin"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableLeft="@mipmap/ic_wechat"
+                        android:drawablePadding="@dimen/common_height25"
+                        android:drawableRight="@drawable/rb_green_select"
+                        android:paddingLeft="@dimen/common_height15"
+                        android:paddingRight="@dimen/common_height15"
+                        android:text="@string/weixin_pay"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/bgColor" />
+
+                    <RadioButton
+                        android:id="@+id/rb_appliy"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableLeft="@mipmap/ic_aipay"
+                        android:drawablePadding="@dimen/common_height25"
+                        android:drawableRight="@drawable/rb_green_select"
+                        android:paddingLeft="@dimen/common_height15"
+                        android:paddingRight="@dimen/common_height15"
+                        android:text="@string/apily"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/trance_1a99" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height50"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_money"
+                android:background="@color/white"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/common_height15"
+                android:text="充值金额"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv"
+                android:gravity="center"
+                android:hint="0"
+                android:paddingLeft="@dimen/common_height15"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="@dimen/text_size_22" />
+
+            <TextView
+                android:id="@+id/tv_danwei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_money"
+                android:layout_toRightOf="@+id/tv_money"
+                android:gravity="center"
+                android:hint=".00元"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/bt_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/common_height30"
+                android:paddingRight="@dimen/common_height30"
+                android:text="立即缴费"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <EditText
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="@string/input_advice_len"
+            android:maxLength="500"
+            android:minHeight="100dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="@dimen/text_size_15" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="联系方式"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/et_lxfs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="QQ/微信/电话"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_15" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

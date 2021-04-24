@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--当angle=0时，渐变色是从左向右。 然后逆时针方向转，当angle=90时为从下往上-->
+    <!--当angle=180时，渐变色是从右向左-->
+
+    <gradient
+        android:angle="180"
+        android:endColor="@color/color_00aa78"
+        android:startColor="@color/color_00c85a" />
+    <corners android:radius="@dimen/common_height5" />
+</shape>

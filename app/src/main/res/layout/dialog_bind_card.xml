@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/validate_img_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common_height15">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_bangka" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_sc_pic" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_height20"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="您需要绑定校园卡，\n才能使用校园卡相关功能"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/bt_confirm"
+            android:layout_width="220dp"
+            android:layout_height="@dimen/common_height35"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/common_height20"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_mian_gradient25dp"
+            android:text="立即绑定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</LinearLayout>

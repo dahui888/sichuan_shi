@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:layout_marginBottom="@dimen/common_height25"
+            android:layout_marginLeft="@dimen/common_height10"
+            android:layout_marginRight="@dimen/common_height10"
+            android:layout_marginTop="@dimen/common_height20"
+            android:background="@mipmap/ic_bg_card"
+            android:padding="@dimen/common_height20">
+
+
+            <RelativeLayout
+                android:id="@+id/re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/re1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_name"
+                        android:layout_marginLeft="@dimen/common_height5"
+                        android:layout_toRightOf="@+id/tv_name"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_10" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_xuehao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/re1"
+                    android:layout_marginTop="@dimen/common_height20"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_chuanshi" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_from_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:padding="@dimen/common_height10">
+
+            <Button
+                android:id="@+id/bt_bind"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height45"
+                android:background="@drawable/bg_mian_gradient"
+                android:text="解绑"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

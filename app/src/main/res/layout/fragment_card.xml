@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:statusBarBackground="@color/white">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/common_height10"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="@string/card"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_25"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/re_bg"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:layout_marginBottom="@dimen/common_height10"
+                android:layout_marginLeft="@dimen/common_height5"
+                android:layout_marginRight="@dimen/common_height5"
+                android:layout_marginTop="@dimen/common_height20"
+                android:background="@mipmap/ic_bg_card"
+                android:padding="@dimen/common_height20">
+
+                <RelativeLayout
+                    android:id="@+id/re"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/re1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/tv_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_name"
+                            android:layout_marginLeft="@dimen/common_height5"
+                            android:layout_toRightOf="@+id/tv_name"
+                            android:gravity="center"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_10" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_xuehao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/re1"
+                        android:layout_marginTop="@dimen/common_height20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_chuanshi" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_from_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_height10"
+                android:layout_marginTop="@dimen/common_height5"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bt_ck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/common_height5"
+                    android:drawableTop="@mipmap/ic_ckxx"
+                    android:gravity="center"
+                    android:padding="@dimen/common_height8"
+                    android:text="存款信息"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/bt_qc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/common_height8"
+                    android:drawableTop="@mipmap/ic_qcxx"
+                    android:gravity="center"
+                    android:padding="@dimen/common_height5"
+                    android:text="圈款记录"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/bt_loss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/common_height8"
+                    android:drawableTop="@mipmap/ic_xygs"
+                    android:gravity="center"
+                    android:padding="@dimen/common_height5"
+                    android:text="校园卡挂失"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/bt_bz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/common_height8"
+                    android:drawableTop="@mipmap/ic_jkxx"
+                    android:gravity="center"
+                    android:padding="@dimen/common_height5"
+                    android:text="未领补助"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/bt_jk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/common_height8"
+                    android:drawableTop="@mipmap/ic_bzcx"
+                    android:gravity="center"
+                    android:padding="@dimen/common_height5"
+                    android:text="捡卡信息"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bt_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgColor"
+                android:padding="@dimen/common_height10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消费记录" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv"
+                    android:text="查看更多"
+                    android:textColor="@color/color_00b464"
+                    android:textSize="@dimen/text_size_13" />
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_right" />
+            </RelativeLayout>
+
+            <com.base.frame.weigt.recycle.XRecyclerView
+                android:id="@+id/mListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_height20"
+                android:drawablePadding="@dimen/common_height10"
+                android:drawableTop="@mipmap/ic_kkry"
+                android:gravity="center"
+                android:text="空空如也"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="btn_sytle_actionBarItemBackground">-->
+        <!--&lt;!&ndash;超出边界水纹&ndash;&gt;-->
+        <!--<item name="android:background">?android:attr/actionBarItemBackground</item>-->
+    <!--</style>-->
+
+    <!--<style name="btn_sytle_selectableItemBackground">-->
+        <!--&lt;!&ndash;边界内水纹&ndash;&gt;-->
+        <!--<item name="android:background">?android:attr/selectableItemBackground</item>-->
+    <!--</style>-->
+
+
+    <style name="DialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

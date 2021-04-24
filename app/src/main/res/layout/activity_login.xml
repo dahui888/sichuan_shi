@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <com.campuscard.app.view.ClearEditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height60"
+                android:layout_marginTop="@dimen/common_height30"
+                android:background="@color/white"
+                android:hint="@string/input_mobile"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height60"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.campuscard.app.view.ClearEditText
+                    android:id="@+id/et_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/set_pwd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/bt_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/common_height10"
+                    android:src="@mipmap/ic_open_close" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_two"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/bt_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:paddingBottom="@dimen/common_height15"
+                android:paddingTop="@dimen/common_height20"
+                android:text="忘记密码？"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height45"
+                android:layout_marginBottom="@dimen/common_height10"
+                android:layout_marginTop="@dimen/common_height10"
+                android:background="@drawable/bg_mian_gradient"
+                android:text="登录"
+                android:textColor="@color/trance99"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/bt_zhuce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_height5"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="还没有账号？立即注册"
+                android:textColor="@color/color_00b464"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/common_height15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/color_f0f0f0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_height10"
+                    android:layout_marginRight="@dimen/common_height10"
+                    android:text="@string/other_login"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_10" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/color_f0f0f0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_height20"
+                android:layout_marginTop="@dimen/common_height20">
+
+                <ImageView
+                    android:id="@+id/iv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:src="@mipmap/ic_qq" />
+
+                <ImageView
+                    android:id="@+id/iv_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:src="@mipmap/ic_wx" />
+
+                <ImageView
+                    android:id="@+id/iv_sina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_xins" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

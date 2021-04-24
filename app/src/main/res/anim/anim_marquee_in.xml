@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="300"
+        android:fromYDelta="100%p"
+        android:toYDelta="0"/>
+    <alpha
+        android:duration="500"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+
+    <!-- ↓相关文件↓-->
+    <!-- UPTextView 类-->
+    <!--滚动textView 样式-->
+    <!-- item_scroll_up_view 布局-->
+
+    <!-- * 描述:上滑滚动TextView
+     * \头条1&#45;&#45;xxxxxxxx   \
+     * \头条2&#45;&#45;xxxxxxxx   \ -->
+
+</set>
+
+

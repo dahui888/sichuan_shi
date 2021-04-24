@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/trance_1a99" />
+
+
+        <EditText
+            android:id="@+id/et_necheng"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height45"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:hint="请输入你的昵称"
+            android:lines="1"
+            android:padding="10dp"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

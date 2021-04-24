@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    defaultConfig {
+        applicationId "com.campuscard.app"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("school.jks")
+            storePassword "school@123"
+            keyAlias "school"
+            keyPassword "school@123"
+        }
+    }
+    buildTypes {
+        debug {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //框架
+    api project(path: ':frame')
+    //图片视频选择
+//    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    api project(path: ':picture_library')
+    //三方登录
+    implementation project(path: ':mob')
+    //友盟推送
+    api project(path: ':push')
+    //时间选择
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //支付
+    implementation files('libs/ccbnetpay_v2.2.0.jar')
+    //圆形控件
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+}

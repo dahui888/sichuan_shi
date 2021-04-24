@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+        <com.campuscard.app.view.ClearEditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height60"
+            android:layout_marginTop="@dimen/common_height30"
+            android:background="@color/white"
+            android:hint="@string/input_mobile"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height60"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.campuscard.app.view.ClearEditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="@string/input_code"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/color_line" />
+
+            <Button
+                android:id="@+id/bt_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/getCode"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_two"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_line" />
+
+        <com.campuscard.app.view.ClearEditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height60"
+            android:background="@color/white"
+            android:hint="@string/set_pwd"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/view_san"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height45"
+            android:layout_marginBottom="@dimen/common_height10"
+            android:layout_marginTop="@dimen/common_height35"
+            android:background="@drawable/bg_mian_gradient"
+            android:text="确定"
+            android:textColor="@color/trance99"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/mCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:text="@string/read"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/bt_advice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/xiyi"
+                android:textColor="@color/color_00b464"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+
+    <include layout="@layout/select_time_top" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <!--日账单-->
+        <LinearLayout
+            android:id="@+id/lin_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_height15"
+                android:layout_marginRight="@dimen/common_height15"
+                android:layout_marginTop="@dimen/common_height30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="开始时间"
+                    android:padding="@dimen/common_height10"
+                    android:textColor="@color/color_00b464"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/text_size_19" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_height5"
+                    android:layout_marginRight="@dimen/common_height5"
+                    android:text="至"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="结束时间"
+                    android:padding="@dimen/common_height10"
+                    android:textColor="@color/color_00b464"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/text_size_19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_height15"
+                android:layout_marginRight="@dimen/common_height15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_height5"
+                    android:layout_marginRight="@dimen/common_height5"
+                    android:text="\u3000" />
+
+                <View
+                    android:id="@+id/view_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/common_height15"
+                android:src="@mipmap/ic_shanchu" />
+        </LinearLayout>
+        <!--日账单-->
+
+        <!--周账单-->
+        <LinearLayout
+            android:id="@+id/lin_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_height15"
+            android:layout_marginRight="@dimen/common_height15"
+            android:layout_marginTop="@dimen/common_height30"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_week_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/common_height10"
+                android:text="1周"
+                android:textColor="@color/color_00b464"
+                android:textSize="@dimen/text_size_19" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_00b464" />
+        </LinearLayout>
+
+        <!--月账单-->
+        <LinearLayout
+            android:id="@+id/lin_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_height15"
+            android:layout_marginRight="@dimen/common_height15"
+            android:layout_marginTop="@dimen/common_height30"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_month_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="月份"
+                android:padding="@dimen/common_height10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/text_size_19" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_00b464" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_day_time_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/common_height15">
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_start_year"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_start_month"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_start_day"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:lineHeight="1px"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_day_time_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/common_height15">
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_end_year"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_end_month"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:lineHeight="1px"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_end_day"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:lineHeight="1px"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_month_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_height15"
+            android:layout_marginRight="@dimen/common_height15"
+            android:layout_marginTop="@dimen/common_height15"
+            android:orientation="horizontal">
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:lineHeight="1px"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+
+            <com.campuscard.app.view.wheel.WheelView
+                android:id="@+id/wl_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:normalTextSize="@dimen/text_size_18"
+                app:selectedTextSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <com.campuscard.app.view.WheelStringView
+            android:id="@+id/mWheelView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_height15"
+            android:visibility="gone"
+            app:isCyclic="false"
+            app:itemNumber="5"
+            app:lineColor="@color/white"
+            app:normalTextColor="@color/color_999999"
+            app:normalTextSize="18sp"
+            app:selectedTextColor="@color/black"
+            app:selectedTextSize="18sp"
+            app:unitHeight="35dp" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

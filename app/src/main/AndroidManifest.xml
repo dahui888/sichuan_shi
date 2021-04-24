@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.campuscard.app">
+
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />-->
+    <!-- 拍照权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 定位权限（用于 WebView 定位）-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备信息 -->
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,LockedOrientationActivity"
+        tools:replace="android:allowBackup,android:supportsRtl"
+        tools:targetApi="n">
+
+        <!-- 适配 Android 7.0 文件意图 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.activity.LoginCodeActivity"
+            android:label=""
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity
+            android:name=".ui.activity.my.BindCardActivity"
+            android:label="@string/bind_card" />
+        <activity
+            android:name=".ui.activity.my.MyReleaseActivity"
+            android:label="@string/my_release" />
+        <activity
+            android:name=".ui.activity.my.PersonalInfoActivity"
+            android:label="@string/personal_info" />
+        <activity
+            android:name=".ui.activity.my.ModifyNameActivity"
+            android:label="@string/personal_info" />
+        <activity
+            android:name=".ui.activity.my.ControllerMyReleaseActivity"
+            android:label="@string/my_release" />
+        <activity
+            android:name=".ui.activity.my.MessageCenterActivity"
+            android:label="@string/messagecenter" />
+        <activity
+            android:name=".ui.activity.my.SetPasswordActivity"
+            android:label="@string/setpassword" />
+        <activity
+            android:name=".ui.activity.my.CurrencyActivity"
+            android:label="@string/currency" />
+        <activity
+            android:name=".ui.activity.my.SetPasswordCodeActivity"
+            android:label="@string/set_pass" />
+        <activity
+            android:name=".ui.activity.home.NewsInfoActivity"
+            android:label="@string/info" />
+        <activity
+            android:name=".ui.activity.my.OperationGuideActivity"
+            android:label="@string/operationguide" />
+        <activity
+            android:name=".ui.activity.my.HelpFeedbackActivity"
+            android:label="@string/helpfeedback" />
+        <activity
+            android:name=".ui.activity.my.AboutUsActivity"
+            android:label="@string/aboutus" />
+        <activity
+            android:name=".ui.activity.my.FeedbackActivity"
+            android:label="@string/feedback" />
+        <activity
+            android:name=".ui.activity.home.RechargeElectricActivity"
+            android:label="@string/dfcz"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.home.RechargeCardActivity"
+            android:label="@string/card_recharge"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.home.LostAndFoundActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.activity.home.ReleaseActivity"
+            android:label="@string/release"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.home.RechargeElectricOneActivity"
+            android:label="@string/dfcz"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.activity.home.RecordInfoActivity"
+            android:label="@string/record_info" />
+        <activity
+            android:name=".ui.activity.home.NoticeActivity"
+            android:label="@string/notice" />
+        <activity
+            android:name=".ui.activity.RegistActivity"
+            android:label=""
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.FindPwdActivity"
+            android:label=""
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.card.CardLossActivity"
+            android:label="@string/card_loss"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.card.CardLossRecordActivity"
+            android:label="@string/loss_code" />
+        <activity
+            android:name=".ui.activity.card.BuZhuActivity"
+            android:label="@string/buzhu" />
+        <activity
+            android:name=".ui.activity.card.DepositCircleActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.activity.home.CardRecordActivity"
+            android:label="@string/card_record" />
+        <activity
+            android:name=".ui.activity.my.MessageListActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.activity.my.MessageInfoActivity"
+            android:label="@string/info" />
+        <activity
+            android:name=".ui.activity.home.LostFoundInfoActivity"
+            android:label="@string/info" />
+        <activity
+            android:name=".ui.activity.card.CardCostRecordActivity"
+            android:label="@string/cost_record" />
+        <activity
+            android:name=".ui.activity.my.CardListActivity"
+            android:label="@string/card_list" />
+        <activity
+            android:name=".ui.activity.my.UnBindActivity"
+            android:label="@string/unbind" />
+        <activity
+            android:name=".ui.activity.home.ElectricRecordActivity"
+            android:label="@string/dfcz_record" />
+
+        <activity
+            android:name=".ui.activity.card.SaveMoneyRecordActivity"
+            android:label="@string/save_money" />
+
+        <activity
+            android:name=".ui.activity.card.CardBillActivity"
+            android:label="@string/cardbill" />
+        <activity
+            android:name=".ui.activity.card.ScreeningByTimeActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.activity.home.TongJiChartActivity"
+            android:label="@string/tongji_chart" />
+        <activity
+            android:name=".ui.activity.card.PickUpCardActivity"
+            android:label="@string/pick_up" />
+
+        <activity
+            android:name=".ui.activity.WebHtmlActivity"
+            android:label="" />
+
+        <!--支付添加相关配置-->
+        <activity
+            android:name="com.ccb.ccbnetpay.activity.CcbH5PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ccb.ccbnetpay.activity.appresult.ResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="comccbpay105651000011961androidPay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ccb.ccbnetpay.activity.CcbUnionPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.home.PaySucceedActivity"
+            android:label="@string/pay_succee" />
+
+        <activity
+            android:name=".ui.activity.home.SearchResultActivity"
+            android:label="" />
+
+        <!--支付宝-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--微信-->
+        <activity
+            android:name="com.ccb.ccbnetpay.activity.WXPayEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <!--友盟推送配置-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5b66c4168f4a9d0296000528" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+    </application>
+
+
+    <queries>
+        <!-- 拍照意图：MediaStore.ACTION_IMAGE_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- 拍摄意图：MediaStore.ACTION_VIDEO_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.VIDEO_CAPTURE" />
+        </intent>
+
+        <!-- 图片裁剪意图 -->
+        <intent>
+            <action android:name="com.android.camera.action.CROP" />
+        </intent>
+
+        <!-- 打电话意图：Intent.ACTION_DIAL -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+
+        <!-- 分享意图：Intent.ACTION_SEND -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+
+        <!-- 调起其他页面意图：Intent.ACTION_VIEW -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+    </queries>
+
+
+</manifest>

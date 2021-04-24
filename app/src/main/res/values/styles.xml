@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.BaseApp">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionBarSize">48dp</item>
+
+    </style>
+
+    <style name="AppTheme.BaseApp" parent="Theme.AppCompat.Light.DarkActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+
+    </style>
+
+
+    <style name="MyDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- dialog的通用style -->
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--选择照片的popWindow进出动画-->
+    <style name="BottomInAndOutWindow">
+        <item name="android:windowEnterAnimation">@anim/anim_select_photo_pop_window_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_select_photo_pop_window_out</item>
+    </style>
+
+    <!--布局根节点样式-->
+    <style name="coordinatorLayout_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--启动页-->
+    <style name="AppTheme.Splash" parent="AppTheme">
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+        <item name="android:windowBackground">@mipmap/qidongye</item>
+    </style>
+</resources>

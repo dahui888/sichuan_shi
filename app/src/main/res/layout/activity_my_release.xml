@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/trance_1a99" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height40"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/bt_lost"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_lost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="失物"
+                        android:textColor="@color/color_00b464"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_lost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tv_lost"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/select_green_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bt_found"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_found"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="招领"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_found"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tv_found"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/select_green_line"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <com.base.frame.weigt.recycle.XRecyclerView
+                android:id="@+id/mXRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/layout_data" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_addrelease" />
+
+        <LinearLayout
+            android:id="@+id/bt_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+
+                <CheckBox
+                    android:id="@+id/mCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:button="@drawable/rb_green_select"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text=" 全选"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/bt_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_height35"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_mian_gradient25dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/common_height5"
+                    android:paddingLeft="@dimen/common_height25"
+                    android:paddingRight="@dimen/common_height25"
+                    android:paddingTop="@dimen/common_height5"
+                    android:text="删除"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

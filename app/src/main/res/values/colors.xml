@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00c85a</color>
+    <color name="colorPrimaryDark">#00aa78</color>
+    <color name="colorAccent">#00b464</color>
+
+
+    <color name="bgColor">#f5f5f5</color>
+    <color name="black">#333333</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_line">#f0f0f0</color>
+    <color name="color_00b464">#00b464</color>
+    <color name="color_00c85a">#00c85a</color>
+    <color name="color_00aa78">#00aa78</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_ff5a1e">#ff5a1e</color>
+    <color name="trance">#00000000</color>
+    <!--40%的颜色透明度-->
+    <color name="trance40">#66ffffff</color>
+    <!--60%的颜色透明度-->
+    <color name="trance99">#99ffffff</color>
+    <!--10%的颜色透明度-->
+    <color name="trance_1a99">#1a999999</color>
+    <color name="tranceb0">#a0000000</color>
+    <color name="red">#ff0000</color>
+    <color name="color_fafafa">#fafafa</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_f5">#f5f5f5</color>
+    <color name="color_bulue">#5599CCFF</color>
+    <color name="black_color">#333333</color>
+    <color name="color_fab400">#fab400</color>
+
+</resources>

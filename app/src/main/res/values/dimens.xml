@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_height20">20dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="common_height15">15dp</dimen>
+    <dimen name="common_height10">10dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="common_height45">45dp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="common_height5">5dp</dimen>
+    <dimen name="common_height30">30dp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="common_height8">8dp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="common_height25">25dp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="common_height48">48dp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="common_height35">35dp</dimen>
+    <dimen name="text_size_35">35sp</dimen>
+    <dimen name="common_height40">40dp</dimen>
+    <dimen name="common_height50">50dp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="common_height60">60dp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+</resources>

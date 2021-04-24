@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_height15"
+            android:text="请挂失您本人的校园卡"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_height15"
+            android:paddingRight="@dimen/common_height15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="校园卡号\u3000"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/et_car_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingLeft="30dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:id="@+id/iv_gantan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_gs" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_height15"
+            android:paddingRight="@dimen/common_height15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="校园卡密码"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/et_car_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/input_card_pwd"
+                android:inputType="textPassword"
+                android:paddingLeft="30dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_two"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height45"
+            android:layout_marginLeft="@dimen/common_height15"
+            android:layout_marginRight="@dimen/common_height15"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/bg_mian_gradient"
+            android:text="提交"
+            android:textColor="@color/trance99"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

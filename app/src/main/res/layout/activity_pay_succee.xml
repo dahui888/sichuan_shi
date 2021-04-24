@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/coordinatorLayout_Style"
+    app:statusBarBackground="@color/white">
+
+    <include layout="@layout/base_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="110dp"
+            android:src="@mipmap/ic_pay_suc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_height20"
+            android:text="充值成功"
+            android:textColor="@color/color_00b464"
+            android:textSize="@dimen/text_size_19" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_height20">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_money"
+                android:text="¥"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_35" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_money"
+                android:layout_toRightOf="@+id/tv_money"
+                android:text=".00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height45"
+            android:layout_marginLeft="@dimen/common_height15"
+            android:layout_marginRight="@dimen/common_height15"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_mian_gradient"
+            android:text="完成"
+            android:textColor="@color/trance99"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
